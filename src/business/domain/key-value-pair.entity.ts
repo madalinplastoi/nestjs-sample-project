@@ -1,9 +1,9 @@
 import {v4 as uuidv4} from 'uuid';
 
 export class KeyValuePair {
-    public id: string;
-    public key: string;
-    public value: string;
+    id: string;
+    key: string;
+    value: string;
 
     constructor(key: string, value: string) {
         this.id = uuidv4();
