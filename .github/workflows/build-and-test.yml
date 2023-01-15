@@ -4,10 +4,10 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ $default-branch ]
   pull_request:
-    branches: [ $default-branch ]
+  branches:
+    - main
+  types: [ opened ]
 
 jobs:
   build:
