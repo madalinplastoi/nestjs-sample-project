@@ -7,7 +7,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Build and Publish Docker image on each push to main branch (with buildx)
+name: Build and Publish latest (DEV) Docker image on each push to main branch
 
 on:
   push:
@@ -15,8 +15,8 @@ on:
       - 'main'
 
 jobs:
-  docker:
-    name: Push Docker image to Docker Hub
+  dev-to-docker:
+    name: Push DEV Docker image to Docker Hub with buildx
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
@@ -40,4 +40,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: tooktech/playground:latest,tooktech/playground:1.0.0
+          tags: ${{ secrets.DOCKER_USERNAME }}/playground:latest

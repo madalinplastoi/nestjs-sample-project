@@ -1,4 +1,4 @@
-name: demo workflow
+name: Demo Workflow executed when issue created
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 on:
   issues:
