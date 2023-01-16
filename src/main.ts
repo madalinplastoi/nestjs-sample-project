@@ -19,9 +19,9 @@ async function bootstrap() {
 
     app.enableCors();
 
-    const port = 3000;
+    const port = 9000;
     const env = 'development';
-    await app.listen(3000);
+    await app.listen(port);
 
     console.info(`🚀 Application is running on: http://localhost:${port}/${globalPrefix} using ${env} environment`)
 }

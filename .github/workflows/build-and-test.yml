@@ -1,13 +1,11 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
 
-name: build and test workflow
+name: Build and Test on each opened or updated pull request
 
 on:
-  push:
-    branches: [ master ]
   pull_request:
-    types: [opened]
+    types: [ opened, synchronize ]
 
 jobs:
   build:
@@ -25,7 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install npm dependencies
-        run: npm ci
+        run: npm install
 
       - name: Lint code
         run: npm run lint
