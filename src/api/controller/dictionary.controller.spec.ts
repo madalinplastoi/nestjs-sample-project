@@ -30,7 +30,7 @@ describe('DictionaryController', () => {
             console.log(`Registered key value pair is\n${JSON.stringify(kvp, null, 2)}`);
             expect(kvp).toBeDefined();
             expect(kvp.id).toBeDefined();
-            expect(kvp.key).toEqual(dto.key.toLowerCase());
+            expect(kvp.key).toEqual(dto.key);
             expect(controller.getAllKeyValuePairs().length).toEqual(1);
         });
     });
