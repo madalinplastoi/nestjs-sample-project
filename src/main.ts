@@ -9,7 +9,7 @@ async function bootstrap() {
     app.setGlobalPrefix(globalPrefix);
 
     const options = new DocumentBuilder()
-        .setTitle("NestJS Sample - OpenAPI specification")
+        .setTitle("NestJS Sample - OpenAPI specification (updated!!!)")
         .setDescription("The API description")
         .setVersion('1.0')
         .addBearerAuth()
