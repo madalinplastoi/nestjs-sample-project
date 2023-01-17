@@ -7,7 +7,7 @@
 # To get a newer version, you will need to update the SHA.
 # You can also reference a tag or branch, but the action may change without warning.
 
-name: Build and Publish release Docker image when tag is pushed
+name: Publish RELEASE Docker image
 
 on:
   push:
@@ -39,5 +39,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.meta.outputs.tags[0] }}
           labels: ${{ steps.meta.outputs.labels }}
