@@ -2,4 +2,4 @@ Build the image
 > docker build -t nestjs-sample:1.0.0 .
 
 Run the image
-> docker run -d -p 9000:9000 --name nestjs-sample nestjs-sample:1.0.0
+> docker run -d -p 9000:9000 --name nestjs-sample tooktech/playground:1.0.0-rc.0
