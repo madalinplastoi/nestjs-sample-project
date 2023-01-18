@@ -7,7 +7,8 @@ export class KeyValuePair {
 
     constructor(key: string, value: string) {
         this.id = uuidv4();
-        this.key = key.toLowerCase();
+        //this.key = key.toLowerCase();
+        this.key = key;
         this.value = value;
     }
 }
